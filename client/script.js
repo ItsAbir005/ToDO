@@ -22,7 +22,6 @@ async function fetchTodos() {
 async function addTodo() {
     const todoInput = document.getElementById("todoInput");
     const todoText = todoInput.value.trim();
-    if (!todoText) return alert("Please enter a todo");
 
     await fetch(`${API_URL}/add`, {
         method: "POST",
