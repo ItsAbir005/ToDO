@@ -1,7 +1,5 @@
-const API_URL = "http://127.0.0.1:5000";
-
 async function fetchTodos() {
-    const response = await fetch(`${API_URL}/get_todos`);
+    const response = await fetch(`http://127.0.0.1:5000/get_todos`);
     const todos = await response.json();
     const todoList = document.getElementById("todoList");
     todoList.innerHTML = "";
@@ -23,7 +21,7 @@ async function addTodo() {
     const todoInput = document.getElementById("todoInput");
     const todoText = todoInput.value.trim();
 
-    await fetch(`${API_URL}/add`, {
+    await fetch(`http://127.0.0.1:5000/add`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ todo: todoText })
@@ -34,7 +32,7 @@ async function addTodo() {
 }
 
 async function deleteTodo(todoText) {
-    await fetch(`${API_URL}/delete`, {
+    await fetch(`http://127.0.0.1:5000/delete`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ todo: todoText })
