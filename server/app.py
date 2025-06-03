@@ -52,8 +52,8 @@ def get_all_todos():
     return jsonify(todos)
 
 # Entry point for the Flask application
-# End of app.py file
 # This block is primarily for local development.
 # For deployment on Render, Gunicorn will be used to run 'app:app'.
 if __name__ == "__main__":
     app.run(debug=True) # debug=True is good for local development, shows error messages.
+# End of app.py file
