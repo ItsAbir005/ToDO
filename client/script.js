@@ -1,5 +1,5 @@
 // Define your backend URL at the top
-const BACKEND_API_URL = "https://YOUR_RENDER_BACKEND_URL.onrender.com"; // <-- ***REPLACE THIS WITH YOUR ACTUAL RENDER URL***
+const BACKEND_API_URL = "https://todo-1-7rt5.onrender.com"; 
 
 async function fetchTodos() {
     const response = await fetch(`${BACKEND_API_URL}/get_todos`); // Use the constant
